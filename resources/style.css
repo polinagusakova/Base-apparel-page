@@ -82,7 +82,7 @@ h6 {
 }
 
 /****** RESET END ******/
-body main .container {
+body .info .desc, body .info, body {
   display: flex;
 }
 
@@ -90,103 +90,107 @@ body {
   font-family: "Josefin Sans", sans-serif;
   background-image: url(./images/bg-pattern-desktop.svg);
   background-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-  gap: 2rem;
-  min-height: 100vh;
+  background-size: contain;
+  min-height: 100svh;
 }
-body main .container {
-  flex-direction: column;
-  margin-top: 3rem;
-  margin-left: 8rem;
-  gap: 1rem;
-}
-@media screen and (max-width: 500px) {
-  body main .container {
-    margin: 0;
-    gap: 3rem;
-    height: 100vh;
-  }
-}
-body main .hero-desktop {
+body .hero-desktop {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
   width: 40vw;
+  height: 100vh;
 }
 @media screen and (max-width: 500px) {
-  body main .hero-desktop {
+  body .hero-desktop {
     display: none;
   }
 }
-body main .hero-mobile {
+body .hero-mobile {
   display: none;
 }
 @media screen and (max-width: 500px) {
-  body main .hero-mobile {
+  body .hero-mobile {
     display: block;
+    margin-top: 1rem;
+    padding: 0;
   }
 }
-body main .logo {
-  width: 10%;
-}
-@media screen and (max-width: 500px) {
-  body main .logo {
-    width: 30%;
-    justify-self: flex-start;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-}
-body main .description {
-  min-width: 20rem;
+body .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50vw;
   flex-direction: column;
-  gap: 1rem;
-  width: 20rem;
-  margin-top: 3rem;
+  height: 100svh;
+}
+body .info {
+  flex-direction: column;
+  width: 30vw;
+  height: 100vh;
+  margin-top: 2rem;
+  justify-content: space-around;
 }
 @media screen and (max-width: 500px) {
-  body main .description {
+  body .info {
+    width: 100%;
     text-align: center;
     justify-self: center;
     align-self: center;
-    margin-top: 1rem;
     text-align: center;
   }
 }
-body main h1 {
+body .info .logo {
+  width: 40%;
+}
+@media screen and (max-width: 500px) {
+  body .info .logo {
+    width: 40%;
+    margin-left: 1rem;
+  }
+}
+body .info .desc {
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+body .info h1 {
   font-size: 3rem;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.5rem;
   color: hsl(0, 6%, 24%);
 }
-body main h1 span {
+body .info h1 span {
   font-weight: 300;
   color: hsl(0, 36%, 70%);
 }
-body main p {
+@media screen and (max-width: 500px) {
+  body .info h1 {
+    margin-top: 2rem;
+  }
+}
+body .info p {
   font-size: 0.8rem;
   color: hsl(0, 36%, 70%);
 }
-body main form {
+body .info form {
   margin-top: 1rem;
   position: relative;
   display: inline-block;
   width: 100%;
 }
-body main form input {
+body .info form input {
   width: 100%;
   border-radius: 20px;
   border: 1px solid hsla(0, 36%, 70%, 0.5);
   padding: 0.4rem 0.4rem 0.4rem 1rem;
   font-size: 0.8rem;
 }
-body main form ::placeholder {
+body .info form ::placeholder {
   color: hsla(0, 36%, 70%, 0.5);
   font-size: 0.8rem;
 }
-body main form button {
+body .info form button {
   width: 20%;
   position: absolute;
   top: 0;
@@ -197,32 +201,32 @@ body main form button {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   cursor: pointer;
 }
-body main form button img {
+body .info form button img {
   margin: 0 auto;
 }
-body main form button:active {
+body .info form button:active {
   background: hsl(0, 80%, 86%);
   box-shadow: 5px 5px 15px hsl(0, 36%, 70%);
 }
-body main form #error-icon {
+body .info form #error-icon {
   position: absolute;
   top: 50%; /* Position Y halfway in */
   left: 70%; /* Position X halfway in */
   transform: translate(-50%, -50%);
 }
-body main #alert {
+body .info #alert {
   margin-left: 1rem;
   font-size: 0.7rem;
   color: hsl(0, 93%, 68%);
 }
-body .attribution {
+body .info .attribution {
   font-size: 11px;
 }
-body .attribution a {
+body .info .attribution a {
   color: hsl(0, 6%, 24%);
 }
 @media screen and (max-width: 500px) {
-  body .attribution {
+  body .info .attribution {
     display: none;
   }
 }
